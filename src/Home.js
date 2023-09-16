@@ -2,7 +2,7 @@
 import Movielist from './Movielist'
 import UseFecth from './UseFetch'
 const Homepage = () => {
-  const {data:movies, isLoading, error} = UseFecth('https://api.themoviedb.org/3/movie/now_playing')
+  const {data:movies, isLoading, error} = UseFecth('https://api.themoviedb.org/3/movie/top_rated')
   return (
     <div className=''>
       {movies && <Movielist movies={movies} title={'featured movie'} />}
